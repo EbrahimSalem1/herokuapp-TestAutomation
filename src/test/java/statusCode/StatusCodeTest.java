@@ -34,10 +34,10 @@ public class StatusCodeTest extends BaseTest {
 
 
         WebElement getTextStatus200 = driver.findElement(status200Text);
-        String ActualStatus200Text = getTextStatus200.getText();
-        String ExpectedStatus200Text = "This page returned a 200 status code.";
+        String actualStatus200Text = getTextStatus200.getText();
+        String expectedStatus200Text = "This page returned a 200 status code.";
 
-        Assert.assertTrue(ActualStatus200Text.contains(ExpectedStatus200Text));
+        Assert.assertTrue(actualStatus200Text.contains(expectedStatus200Text));
     }
 
     @Test(priority = 2)
@@ -52,10 +52,10 @@ public class StatusCodeTest extends BaseTest {
 
 
         WebElement getTextStatus301 = driver.findElement(status301Text);
-        String ActualStatus301Text = getTextStatus301.getText();
-        String ExpectedStatus301Text = "This page returned a 301 status code.";
+        String actualStatus301Text = getTextStatus301.getText();
+        String expectedStatus301Text = "This page returned a 301 status code.";
 
-        Assert.assertTrue(ActualStatus301Text.contains(ExpectedStatus301Text));
+        Assert.assertTrue(actualStatus301Text.contains(expectedStatus301Text));
     }
 
 
@@ -71,10 +71,10 @@ public class StatusCodeTest extends BaseTest {
 
 
         WebElement getTextStatus404 = driver.findElement(status404Text);
-        String ActualStatus404Text = getTextStatus404.getText();
-        String ExpectedStatus404Text = "This page returned a 404 status code.";
+        String actualStatus404Text = getTextStatus404.getText();
+        String expectedStatus404Text = "This page returned a 404 status code.";
 
-        Assert.assertTrue(ActualStatus404Text.contains(ExpectedStatus404Text));
+        Assert.assertTrue(actualStatus404Text.contains(expectedStatus404Text));
     }
 
 
@@ -90,10 +90,10 @@ public class StatusCodeTest extends BaseTest {
 
 
         WebElement getTextStatus500 = driver.findElement(status500Text);
-        String ActualStatus500Text = getTextStatus500.getText();
-        String ExpectedStatus500Text = "This page returned a 500 status code.";
+        String actualStatus500Text = getTextStatus500.getText();
+        String expectedStatus500Text = "This page returned a 500 status code.";
 
-        Assert.assertTrue(ActualStatus500Text.contains(ExpectedStatus500Text));
+        Assert.assertTrue(actualStatus500Text.contains(expectedStatus500Text));
     }
 
 

@@ -31,13 +31,15 @@ public class UploadFileTest extends BaseTest {
 
 
         WebElement textUploadFile = driver.findElement(textUploadedFile);
-        String actualTextUploaded = textUploadFile.getText();
-        String expectedTextUploaded = "kascsakj.jpg";
+        Assert.assertEquals(textUploadFile.getText(),"kascsakj.jpg");
 
-        if(textUploadFile.isDisplayed()){
-            Assert.assertEquals(actualTextUploaded , expectedTextUploaded);
-        }
 
+
+
+//      String textUploadFile = driver.findElement(textUploadedFile).getText();
+//      String actualTextUploaded = textUploadFile.getText();
+//      String expectedTextUploaded = "kascsakj.jpg";
+//      Assert.assertTrue(textUploadFile.contains("kascsakj.jpg"));
 
     }
 

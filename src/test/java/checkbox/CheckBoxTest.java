@@ -21,8 +21,8 @@ public class CheckBoxTest extends BaseTest {
     @Test
     public void testClickOnCheckboxes(){
 
-        WebElement CheckBoxLink = driver.findElement(checkBoxesLinkText);
-        CheckBoxLink.click();
+        WebElement checkBoxLink = driver.findElement(checkBoxesLinkText);
+        checkBoxLink.click();
 
          List<WebElement> checkBoxes =  driver.findElements(checkBoxesForm);
 

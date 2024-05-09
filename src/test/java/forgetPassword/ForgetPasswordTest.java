@@ -12,7 +12,7 @@ public class ForgetPasswordTest extends BaseTest {
 
     private final By forgetPasswordLinkText = By.linkText("Forgot Password");
     private final By emilaField = By.id("email");
-    private final By RetrievePasswordBtn = By.id("form_submit");
+    private final By retrievePasswordBtn = By.id("form_submit");
     private final By exceptionTextError = By.cssSelector("body > h1");
 
 
@@ -29,15 +29,15 @@ public class ForgetPasswordTest extends BaseTest {
         enterEmail.sendKeys("test1@gmail.com");
 
 
-        WebElement clickOnRetrievePasswordBtn = driver.findElement(RetrievePasswordBtn);
+        WebElement clickOnRetrievePasswordBtn = driver.findElement(retrievePasswordBtn);
         clickOnRetrievePasswordBtn.click();
 
 
         WebElement getTextExceptionError = driver.findElement(exceptionTextError);
 
-        String ActualTextExceptionError = getTextExceptionError.getText();
-        String ExpectedTextExceptionError = "Internal Server Error";
-        Assert.assertEquals(ActualTextExceptionError , ExpectedTextExceptionError);
+        String actualTextExceptionError = getTextExceptionError.getText();
+        String expectedTextExceptionError = "Internal Server Error";
+        Assert.assertEquals(actualTextExceptionError , expectedTextExceptionError);
 
     }
 

@@ -1,43 +1,27 @@
 package forgetPassword;
 
 import base.BaseTest;
+import forgetPasswordPage.ForgetPasswordPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static utilities.DataDrivenClass.JsonClass.readJson;
+
 public class ForgetPasswordTest extends BaseTest {
 
 
-
-    private final By forgetPasswordLinkText = By.linkText("Forgot Password");
-    private final By emilaField = By.id("email");
-    private final By retrievePasswordBtn = By.id("form_submit");
-    private final By exceptionTextError = By.cssSelector("body > h1");
-
-
-
+    String jsonForgetPasswordFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\dataDrivenJson\\forgetPassword.json";
 
     @Test
-    public void testRetrievePassword(){
+    public void testForgetPasswordExceptionError(){
 
-        WebElement clickOnForgetPasswordLink = driver.findElement(forgetPasswordLinkText);
-        clickOnForgetPasswordLink.click();
-
-
-        WebElement enterEmail = driver.findElement(emilaField);
-        enterEmail.sendKeys("test1@gmail.com");
-
-
-        WebElement clickOnRetrievePasswordBtn = driver.findElement(retrievePasswordBtn);
-        clickOnRetrievePasswordBtn.click();
-
-
-        WebElement getTextExceptionError = driver.findElement(exceptionTextError);
-
-        String actualTextExceptionError = getTextExceptionError.getText();
-        String expectedTextExceptionError = "Internal Server Error";
-        Assert.assertEquals(actualTextExceptionError , expectedTextExceptionError);
+        ForgetPasswordPage forget = homePage.clickOnForgetPasswordLink();
+        forget.enterForgetPasswordEmail(readJson(jsonForgetPasswordFilePath , "email1"));
+        forget.clickOnRetrievedBtn();
+        String actualExceptionError = forget.getExceptionError();
+        Assert.assertEquals(actualExceptionError,"Internal Server Error");
 
     }
 

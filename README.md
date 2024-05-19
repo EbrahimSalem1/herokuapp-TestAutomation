@@ -17,6 +17,10 @@
 <br>* Check all Status Code and return a status code & check each all status code texts as an Expected Results</br>
 <br>* CheckBoxes and validate it(Selected)</br>
 <br>* Upload File as an Image</br>
+<br>* Select an Option From Drop-Down List and Validate it</br>
+<br>* Dynamic Loading Page One (get Text After Dynamic Loaded Page)</br>
+<br>* Dynamic Loading Page Two (validate that loader is completed)</br>
+
 
 
 

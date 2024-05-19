@@ -1,6 +1,8 @@
 package homePage;
 
 import checkBoxPage.CheckBoxPage;
+import dropDownPage.DropDownPage;
+import dynamicLoadPage.DynamicLodingPage;
 import forgetPasswordPage.ForgetPasswordPage;
 import io.qameta.allure.Step;
 import loginPage.LoginPage;
@@ -23,7 +25,8 @@ public class HomePage {
     private final By statusCodeLinkText = By.linkText("Status Codes");
     private final By forgetPasswordLinkText = By.linkText("Forgot Password");
     private final By formAuthenticationLinkText = By.linkText("Form Authentication");
-
+    private  final By dynamicLoadingLinkText = By.linkText("Dynamic Loading");
+    private final By dropdownLinkText = By.linkText("Dropdown");
 
 
     @Step
@@ -62,5 +65,19 @@ public class HomePage {
         driver.findElement(formAuthenticationLinkText).click();
         return new LoginPage(driver);
     }
+
+    @Step
+    public DynamicLodingPage clickOnDynamicLoadingLink(){
+        driver.findElement(dynamicLoadingLinkText).click();
+        return new DynamicLodingPage(driver);
+    }
+
+    @Step
+    public DropDownPage clickOnDropDownLink(){
+        driver.findElement(dropdownLinkText).click();
+        return new DropDownPage(driver);
+    }
+
+
 
 }

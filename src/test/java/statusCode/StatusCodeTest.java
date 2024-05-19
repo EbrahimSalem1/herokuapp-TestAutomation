@@ -11,19 +11,26 @@ import statusCodePage.StatusPage;
 public class StatusCodeTest extends BaseTest {
 
 
-    @Test(priority = 1)
+    @Test()
     public void testStatusCode200() {
 
+
+        // first approach
+        StatusPage status = homePage.clickOnStatusCodeLink();
+        status.clickOnStatus200();
+        Assert.assertTrue(status.getStatus200Text().contains("This page returned a 200 status code."));
+
+
+        // Second approach
         Assert.assertTrue(
                 homePage.clickOnStatusCodeLink()
                         .clickOnStatus200()
                         .getStatus200Text().contains("This page returned a 200 status code.")
-
         );
 
     }
 
-    @Test(priority = 2)
+    @Test()
     public void testStatusCode301() {
 
         Assert.assertTrue(

@@ -42,5 +42,22 @@
             </class>
         </classes>
     </test>
+    <test name="jsAlertsTest">
+        <classes>
+            <class name="jsAlerts.JsScriptAlertsTest">
+            </class>
+        </classes>
+    </test>
+    <test name="entryAdTest">
+        <classes>
+            <class name="entryAd.EntryAdTest">
+            </class>
+        </classes>
+    </test>
+    <test name="frameTest">
+        <classes>
+            <class name="frames.FramesTests">
+            </class>
+        </classes>
+    </test>
 </suite>
-

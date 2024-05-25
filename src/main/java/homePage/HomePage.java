@@ -3,8 +3,10 @@ package homePage;
 import checkBoxPage.CheckBoxPage;
 import dropDownPage.DropDownPage;
 import dynamicLoadPage.DynamicLodingPage;
+import entryAdPage.EntryAd;
 import forgetPasswordPage.ForgetPasswordPage;
 import io.qameta.allure.Step;
+import javascriptAlertsPage.JavaScriptAlerts;
 import loginPage.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +29,8 @@ public class HomePage {
     private final By formAuthenticationLinkText = By.linkText("Form Authentication");
     private  final By dynamicLoadingLinkText = By.linkText("Dynamic Loading");
     private final By dropdownLinkText = By.linkText("Dropdown");
+    private final By javaScriptAlertsLinkText = By.linkText("JavaScript Alerts");
+    private final By entryAdLinkText = By.linkText("Entry Ad");
 
 
     @Step
@@ -78,6 +82,16 @@ public class HomePage {
         return new DropDownPage(driver);
     }
 
+    @Step
+    public JavaScriptAlerts clickOnJavaScriptAlertsLinkText(){
+        driver.findElement(javaScriptAlertsLinkText).click();
+        return new JavaScriptAlerts(driver);
+    }
 
+    @Step
+    public EntryAd clickOnEntryAdTextLink(){
+        driver.findElement(entryAdLinkText).click();
+        return new EntryAd(driver);
+    }
 
 }

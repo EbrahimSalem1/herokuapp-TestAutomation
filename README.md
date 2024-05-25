@@ -12,13 +12,15 @@
 <p>Covering The following Test Cases :</p>
 
 
-<br>* Foget-Password with Exception Error 500</br> 
+<br>* Forget-Password with Exception Error 500</br> 
 <br>* Login user and validate of Confirm Success Message to Login Securely</br> 
 <br>* Check all Status Code and return a status code & check each all status code texts as an Expected Results</br>
 <br>* CheckBoxes and validate it(Selected)</br>
 <br>* Upload File as an Image</br>
-
-
-
-
-
+<br>* Select an Option From Drop-Down List and Validate it</br>
+<br>* Dynamic Loading Page One (get Text After Dynamic Loaded Page)</br>
+<br>* Dynamic Loading Page Two (validate that loader is completed)</br>
+<br>* JavaScript Alerts Page (validate JavaScript Confirm Button and assert to Expected result text)
+(validate JavaScript Prompt Button with send data and click on accept and assert to Expected Result sent data text)</br>
+<br>* Entry Ad Page (validate Close entry advertisement box and Assert to Expected Title Page)</br>
+<br>* Frame Page (validate switch to textInput inside frame and send data and assert it and click On Another Frame Button outside it)</br>

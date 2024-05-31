@@ -24,3 +24,4 @@
 (validate JavaScript Prompt Button with send data and click on accept and assert to Expected Result sent data text)</br>
 <br>* Entry Ad Page (validate Close entry advertisement box and Assert to Expected Title Page)</br>
 <br>* Frame Page (validate switch to textInput inside frame and send data and assert it and click On Another Frame Button outside it)</br>
+<br>* Hover Page (validate hover on figure and figureCaption and Assert it with getText (FigureCaption)by Dynamic Data)</br>

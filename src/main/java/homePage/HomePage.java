@@ -5,6 +5,7 @@ import dropDownPage.DropDownPage;
 import dynamicLoadPage.DynamicLodingPage;
 import entryAdPage.EntryAd;
 import forgetPasswordPage.ForgetPasswordPage;
+import hoversPage.Hovers;
 import io.qameta.allure.Step;
 import javascriptAlertsPage.JavaScriptAlerts;
 import loginPage.LoginPage;
@@ -31,6 +32,7 @@ public class HomePage {
     private final By dropdownLinkText = By.linkText("Dropdown");
     private final By javaScriptAlertsLinkText = By.linkText("JavaScript Alerts");
     private final By entryAdLinkText = By.linkText("Entry Ad");
+    private final By hoverLinkText = By.linkText("Hovers");
 
 
     @Step
@@ -92,6 +94,12 @@ public class HomePage {
     public EntryAd clickOnEntryAdTextLink(){
         driver.findElement(entryAdLinkText).click();
         return new EntryAd(driver);
+    }
+
+    @Step
+    public Hovers clickOnHoverLinkText(){
+        driver.findElement(hoverLinkText).click();
+        return new Hovers(driver);
     }
 
 }

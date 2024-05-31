@@ -60,4 +60,10 @@
             </class>
         </classes>
     </test>
+    <test name="hoversTests">
+        <classes>
+            <class name="hovers.HoversTest">
+            </class>
+        </classes>
+    </test>
 </suite>

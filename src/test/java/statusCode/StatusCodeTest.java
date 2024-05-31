@@ -16,9 +16,9 @@ public class StatusCodeTest extends BaseTest {
 
 
         // first approach
-        StatusPage status = homePage.clickOnStatusCodeLink();
-        status.clickOnStatus200();
-        Assert.assertTrue(status.getStatus200Text().contains("This page returned a 200 status code."));
+//        StatusPage status = homePage.clickOnStatusCodeLink();
+//        status.clickOnStatus200();
+//        Assert.assertTrue(status.getStatus200Text().contains("This page returned a 200 status code."));
 
 
         // Second approach

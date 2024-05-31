@@ -26,8 +26,7 @@ public class FramesTests extends BaseTest {
         driver.quit();
     }
 
-
-
+    
     @Test
     public void testSwitchToFrameToInsertTextInputInsideFrame(){
         Frames singleFrame = framePage.insertTextInput("test Automation for Frame");

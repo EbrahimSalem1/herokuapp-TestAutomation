@@ -22,7 +22,7 @@ public class FramesTests extends BaseTest {
     }
 
     @AfterMethod
-    public void testTearDown(){
+    public void testTearDown1(){
         driver.quit();
     }
 

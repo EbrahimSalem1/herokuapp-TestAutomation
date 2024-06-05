@@ -12,7 +12,7 @@ import java.time.Duration;
 public class BaseTest {
 
     protected WebDriver driver;
-    protected String url = "https://the-internet.herokuapp.com/";
+    protected String uri = "https://the-internet.herokuapp.com/";
 
     protected HomePage homePage;
     protected LoginPage loginPage;
@@ -23,7 +23,7 @@ public class BaseTest {
     public void testSetUp(){
 
         driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(uri);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);

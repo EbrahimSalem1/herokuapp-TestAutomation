@@ -34,7 +34,7 @@ jobs:
         statusCode.StatusCodeTest"
 
     - name: Generate Allure report
-      run: allure serve allure-results
+      run: mvn allure:report
 
     -  name: Copy patch file to allure-maven-plugin folder
        run: cp src/main/resources/allow-file-access_open-report_chrome_windows.bat target/site/allure-maven-plugin
